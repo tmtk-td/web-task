@@ -11,7 +11,7 @@
     <% result = connection.exec("select weight,length,give_for,date from crops where quality = false;") %>
     <% data = [] %>
     <% result.each do |record| %>
-      <%  data << "ゴーヤの大きさ：#{record["weight"]}　長さ:#{record["length"]}売った相手:#{record["give_for"]} 日付:#{record["date"]}" %>
+      <%  data << "ゴーヤの大きさ：#{record["weight"]}　長さ:#{record["length"]} 売った相手:#{record["give_for"]} 日付:#{record["date"]}" %>
     <% end %>
     <form action="goya.cgi" method="POST">
        下記のボタンを押すと、品質悪いもの。<br><br>
